@@ -63,4 +63,3 @@ export function isValidEmail(email: string): boolean {
 
   return RFC_5322_EMAIL_REGEX.test(email);
 }
-
