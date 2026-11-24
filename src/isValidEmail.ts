@@ -13,7 +13,7 @@ function buildRfc5322Regex(): RegExp {
   const dotAtom = String.raw`${atext}+(?:\.${atext}+)*`;
 
   // Quoted-string local-part (allows spaces, @, consecutive dots, and escaped chars)
-  const qtext = String.raw`[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]`;
+  const qtext = String.raw`[\x01-\x09\x0b\x0c\x0e-\x21\x23-\x5b\x5d-\x7f]`;
   const quotedPair = String.raw`\\[\x01-\x09\x0b\x0c\x0e-\x7f]`;
   const quotedString = `"(?:${qtext}|${quotedPair})*"`;
 
